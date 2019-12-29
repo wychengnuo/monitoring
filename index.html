@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="./css/index.css">
+    <script>
+        // 页面适配
+        (function setFontSize() {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 640) deviceWidth = 640;
+            document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="con con-left">
+            <!-- 网络数据 -->
+            <div class="chart network-data">
+                <div class="header">
+                    <div class="header-text">网络数据</div>
+                    <div class="header-time">144s</div>
+                </div>
+                <div class="block">
+                    <div class="data">
+                        <div>
+                            <p>浏览量(PV)</p>
+                            <p>428.472</p>
+                        </div>
+                        <div>
+                            <p>访客数(UV)</p>
+                            <p>63.407</p>
+                        </div>
+                        <div>
+                            <p>IP数</p>
+                            <p>63.193</p>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <th>站点</th>
+                            <th>PV</th>
+                            <th>UV</th>
+                            <th>IP数</th>
+                        </tr>
+                        <tr>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                        </tr>
+                        <tr>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                        </tr>
+                        <tr>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                        </tr>
+                        <tr>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                        </tr>
+                    </table>
+
+                    <div id="network-data" class="chart-data">
+                    </div>
+                </div>
+            </div>
+            <!-- 蜘蛛分布 -->
+            <div class="chart spider-distribution">
+                <div class="header">
+                    <div class="header-text">蜘蛛分布</div>
+                    <div class="header-time">144s</div>
+                </div>
+                <div class="block">
+                    <div class="data">
+                        <div>
+                            <p>百度</p>
+                            <p>428.472</p>
+                        </div>
+                        <div>
+                            <p>谷歌</p>
+                            <p>63.407</p>
+                        </div>
+                        <div>
+                            <p>搜狗</p>
+                            <p>63.193</p>
+                        </div>
+                        <div>
+                            <p>360</p>
+                            <p>63.193</p>
+                        </div>
+                        <div>
+                            <p>其他</p>
+                            <p>63.193</p>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <th>站点</th>
+                            <th>百度</th>
+                            <th>谷歌</th>
+                            <th>搜狗</th>
+                            <th>360</th>
+                            <th>其他</th>
+                        </tr>
+                        <tr>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                        </tr>
+                        <tr>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                        </tr>
+                        <tr>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                        </tr>
+                        <tr>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                            <td>XXXXX</td>
+                        </tr>
+                        <div class="chart-data">
+
+                        </div>
+                    </table>
+                    <div id="spider-distribution">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con con-center">
+            <!-- title -->
+            <div class="chart title">监控</div>
+            <!-- 平台负载 -->
+            <div class="chart platform-load">
+                <div class="header">
+                    <div class="header-text">平台负载</div>
+                    <div class="header-time">144s</div>
+                </div>
+                <div class="block">
+                    <div class="plat-data">
+                        <p>
+                            <span>总负载</span>
+                            <span>10.16%</span>
+                        </p>
+                        <p>
+                            <span>上行流量</span>
+                            <span>19.29 MB/s</span>
+                        </p>
+                        <p>
+                            <span>今日请求数</span>
+                            <span>3,868,625</span>
+                        </p>
+                        <p>
+                            <span>QPS</span>
+                            <span>106</span>
+                        </p>
+                    </div>
+                    <table class="plat-table">
+                        <tr>
+                            <td>
+                                <div id="total-load"></div>
+                            </td>
+                            <td>
+                                <div id="traffic"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="requests-num"></div>
+                            </td>
+                            <td>
+                                <div id="qps"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 单机状态 -->
+            <div class="chart single-state">
+                <div class="header">
+                    <div class="header-text">单机状态</div>
+                    <div class="header-time">144s</div>
+                </div>
+                <div class="block">
+                    <table class="single-table table">
+                        <tr>
+                            <th>IP</th>
+                            <th>状态</th>
+                            <th>负载</th>
+                            <th>CPU</th>
+                            <th>上行</th>
+                            <th>下行</th>
+                            <th>XX值</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://www.baidu.com/img/baidu_resultlogo@2.png" />
+                                <span>24248234892.999</span>
+                            </td>
+                            <td>
+                                <span class="online">在线</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span class="online">100</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://www.baidu.com/img/baidu_resultlogo@2.png" />
+                                <span>24248234892.999</span>
+                            </td>
+                            <td>
+                                <span class="offline">离线</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span class="offline">100</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://www.baidu.com/img/baidu_resultlogo@2.png" />
+                                <span>24248234892.999</span>
+                            </td>
+                            <td>
+                                <span class="online">在线</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span class="online">100</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <img src="https://www.baidu.com/img/baidu_resultlogo@2.png" />
+                                <span>24248234892.999</span>
+                            </td>
+                            <td>
+                                <span class="online">在线</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span class="online">100</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://www.baidu.com/img/baidu_resultlogo@2.png" />
+                                <span>24248234892.999</span>
+                            </td>
+                            <td>
+                                <span class="online">在线</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span class="online">100</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://www.baidu.com/img/baidu_resultlogo@2.png" />
+                                <span>24248234892.999</span>
+                            </td>
+                            <td>
+                                <span class="online">在线</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                            </td>
+                            <td>
+                                <span class="online">100</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="con con-right">
+            <!-- 安全警告 -->
+            <div class="chart safety-warning">
+                <div class="header">
+                    <div class="header-text">安全警告</div>
+                    <div class="header-time">144s</div>
+                </div>
+                <div class="block">
+                    <div class="warning">
+                        <div>
+                            <p>攻击</p>
+                            <p>428.472</p>
+                        </div>
+                        <div>
+                            <p>爆破</p>
+                            <p>428.472</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 基线监测 -->
+            <div>
+                <div class="chart baseline-monitoring">
+                    <div class="header">
+                        <div class="header-text">基线监测</div>
+                        <div class="header-time">144s</div>
+                    </div>
+                    <div class="block">
+                        <div class="baseline">
+                            <p>
+                                [2019/11/11 11:11:11]：192.11.11.11 33%XXXXX
+                            </p>
+                            <p>
+                                [2019/11/11 11:11:11]：192.11.11.11 33%XXXXX
+                            </p>
+                            <p>
+                                [2019/11/11 11:11:11]：192.11.11.11 33%XXXXX
+                            </p>
+                            <p>
+                                [2019/11/11 11:11:11]：192.11.11.11 33%XXXXX
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 登记记录 -->
+            <div>
+                <div class="chart registration-record">
+                    <div class="header">
+                        <div class="header-text">登记记录</div>
+                        <div class="header-time">144s</div>
+                    </div>
+                    <div class="block">
+                        <div class="baseline record">
+                            <p>
+                                [192.11.11.11]登陆成功，账号：XXXX，登陆IP：192.11.11.11
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 异常 -->
+            <div>
+                <div class="chart abnormal">
+                    <div class="header">
+                        <div class="header-text">异常</div>
+                        <div class="header-time">144s</div>
+                    </div>
+                    <div class="block">
+                        <table class="abn-table">
+                            <tr>
+                                <td>
+                                    <span>401</span>
+                                    <span>2</span>
+                                </td>
+                                <td>
+                                    <span>500</span>
+                                    <span>32</span>
+                                </td>
+                                <td>
+                                    <span>502</span>
+                                    <span>4,522</span>
+                                </td>
+                                <td>
+                                    <span>503</span>
+                                    <span>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>401</span>
+                                    <span>2</span>
+                                </td>
+                                <td>
+                                    <span>500</span>
+                                    <span>32</span>
+                                </td>
+                                <td>
+                                    <span>502</span>
+                                    <span>4,522</span>
+                                </td>
+                                <td>
+                                    <span>503</span>
+                                    <span>0</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="./js/echarts.js"></script>
+<script src="./js/index.js"></script>
+
+</html>
